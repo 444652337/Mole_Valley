@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="row">
+    <%= link_to 'New Event', new_admin_event_path, :class=>"btn btn-primary" %>
+  </div>
+  <% if notice %>
+  <div class="alert alert-block">
+    <%= notice %>
+  </div>
+  <% end %>
+  <% @events.each do |event| %>
+    <article>
+      <p>
+      <%= event.content %>
+      </p>
+      <div>
+        <%= link_to 'Delete', admin_event_path(event), :method=>:delete, :class=>"btn btn-danger pull-right", :data=>{:confirm=>"Are you sure to delete this?"} %>
+        <%= link_to 'Edit', edit_admin_event_path(event), :class=>"btn pull-right" %>
+      </div>
+    </article>
+  <% end %>
+</div>

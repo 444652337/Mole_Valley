@@ -1,0 +1,25 @@
+<% content_for :title do %>
+  Natural History Organisations
+<% end %>
+<div class="main">
+  <h1>Organisations</h1>
+  <p>
+    A very wide range of organisations have a natural history remit in Mole Valley. This page contains
+    a list of all the main ones that we are aware of. Links are provided to their respective web sites
+    where available. Otherwise we provide contact details.
+  </p>
+  <% @organisations.each do |o| %>
+  <article>
+    <h2>
+      <% if o.link %>
+        <%= link_to o.name, o.link, :target=>"_blank" %>
+      <% else %>
+        <%= o.name %>
+      <% end %>
+    </h2>
+    <p>
+      <%= simple_format o.description %>
+    </p>
+  </article>
+  <% end %>
+</div>

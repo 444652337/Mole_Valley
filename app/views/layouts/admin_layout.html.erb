@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>backend for Mole Valley</title>
+  <meta charset="utf-8"/>
+  <%= stylesheet_link_tag 'admin/admin' %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<% if is_admin? %>
+<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand" href="/admin">Bankend Management</a>
+      <ul class="nav">
+        <li <%= admin_nav_class('/admin/events') %>>
+          <%= link_to 'events', admin_events_path %>
+        </li>
+        <li <%= admin_nav_class('/admin/organisations') %> >
+          <%= link_to 'organizations', admin_organisations_path %>
+        </li>
+      </ul>
+      <ul class="nav pull-right">
+        <li>
+          <%= link_to 'Log out', admin_session_path, method: :delete, data: { confirm: 'Are you sure？' } %>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<% end %>
+  <%= yield %>
+</body>
+</html>

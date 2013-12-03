@@ -1,0 +1,91 @@
+body {
+    background-color: #CCFFCC;
+    font-family: sans-serif;
+}
+.banner {
+    background: none repeat scroll 0 0 #008000;
+    border: 3px solid #00FF00;
+    color: #FFFFFF;
+    font-family: 'Apple Chancery','Lucida Handwriting',cursive;
+    font-size: 2em;
+    height: 60px;
+    padding: 15px;
+    text-align: center;
+}
+.floatleft {
+    float: left;
+    padding: 15px;
+}
+.floatright {
+    float: right;
+    padding: 15px;
+}
+.main {
+    margin: 0 100px 10px 160px;
+    padding: 15px;
+}
+#navigation {
+    float: left;
+    width: 140px;
+}
+#navigation ul {
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+}
+#navigation li {
+    border-bottom: 1px solid #00FF00;
+}
+#navigation li a:link, #navigation li a:visited {
+    background-color: #008000;
+    border-left: 12px solid #006400;
+    border-right: 2px solid #006400;
+    color: #FFFFFF;
+    display: block;
+    font-size: 90%;
+    padding: 0.4em 0 0.4em 0.5em;
+    text-decoration: none;
+}
+#navigation li a:hover {
+    background-color: #00FF7F;
+    color: #FFFFFF;
+}
+#navigation h2 {
+    background-color: #008000;
+    border-bottom: 1px solid #00FF00;
+    border-left: 12px solid #006400;
+    border-right: 2px solid #006400;
+    color: #FFFFFF;
+    display: block;
+    margin-bottom: 0;
+    padding: 0.4em 0 0.4em 0.5em;
+    text-decoration: none;
+}
+.links {
+    float: left;
+    font-family: Optima,Arial,sans-serif;
+    font-size: 1em;
+    margin: 0 10px 10px;
+    padding: 15px;
+    width: 140px;
+}
+h1 {
+    font-family: Optima,Arial,sans-serif;
+    font-size: 1.8em;
+    font-variant: small-caps;
+}
+h2 {
+    font-family: Optima,Arial,sans-serif;
+    font-size: 1.4em;
+    font-variant: small-caps;
+}
+p {
+    font-family: Palatino,Garamond,serif;
+    font-size: 1.2em;
+}
+ul {
+    margin-left: 0;
+}
+li {
+    margin-left: 0;
+}

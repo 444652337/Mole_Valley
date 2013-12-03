@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title><%= yield :title %></title>
+  <meta charset="utf-8" />
+  <%= stylesheet_link_tag    "application", media: "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <header class="banner">
+    Mole Valley’s Natural History
+  </header>
+  <nav id="navigation">
+    <h2>Contents</h2>
+    <ul>
+      <li><a href="<%= root_path %>">Home</a></li>
+      <li><a href="<%= resources_path %>"> Resources </a></li>
+      <li><a href="<%= audit_path %>">What is here?</a></li>
+      <li><a href="<%= organisations_path %>">Organisations</a></li>
+      <li><a href="<%= events_path %>">Events</a></li>
+      <li><a href="<%= contact_path %>">Contact Us</a></li>
+    </ul>
+  </nav>
+<%= yield %>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="row">
+    <%= link_to 'New Organisation', new_admin_organisation_path, :class=>"btn btn-primary" %>
+  </div>
+  <% if notice %>
+    <div class="alert alert-block">
+      <%= notice %>
+    </div>
+  <% end %>
+  <% @organisations.each do |o| %>
+    <article>
+      <h2><%= o.name %></h2>
+      <p>
+        <%= simple_format o.description %>
+      </p>
+      <p>
+        Link:&nbsp;<%= o.link %>
+      </p>
+      <div>
+        <%= link_to 'Delete', admin_organisation_path(o), :method=>:delete, :class=>"btn btn-danger pull-right", :data=>{:confirm=>"Are you sure to delete this?"} %>
+        <%= link_to 'Edit', edit_admin_organisation_path(o), :class=>"btn pull-right" %>
+      </div>
+    </article>
+  <% end %>
+</div>

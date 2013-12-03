@@ -1,0 +1,16 @@
+<% content_for :title do %>
+  Natural History Related Events in Mole Valley
+<% end %>
+<div class="main">
+  <h1>Natural History Related Events in Mole Valley</h1>
+  <p>
+    Mole Valley has a lively and active community of natural history enthusiasts. There are events
+    that suite all levels of experience. We provide here some links that will keep you up to date
+    with natural history related activities in Mole Valley.
+  </p>
+  <% @events.each do |event| %>
+  <p>
+    <%= event.content %>
+  </p>
+  <% end %>
+</div>
